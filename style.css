@@ -4,3 +4,199 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+img{
+    height: 100%;
+}
+
+
+/* Sidebar */
+
+.sidebar{
+    width: calc(100% / 3);
+    border-right: 2px solid rgb(201,201,201);
+}
+
+.sidebar_toolbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgb(229,229,229);
+}
+
+.profilo_utente{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.icone{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    color: rgb(162,162,162);
+}
+
+.immagine_utente{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.icona_notifica{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    color: rgb(125,210,250);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifica{
+    height: 60px;
+    padding: 0 15px;
+    background-color: rgb(125,210,250);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testo_notifica_1, .testo_notifica_2{
+    font-size: 13px;
+    display: block;
+}
+
+.testo_notifica_2{
+    color: gray;
+    text-decoration: underline;
+}
+
+.ricerca{
+    height: 35px;
+    background-color: rgb(240, 239, 239);
+    line-height: 33px;
+    padding: 0 12px;
+}
+
+.ricerca_input{
+    width: 100%;
+    border: none;
+    padding: 3px;
+    padding-left: 30px;
+}
+
+.lista_contatti{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contatti{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-left: 15px;
+}
+
+.nome_contatto, .messaggio_contatto{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.messaggio_contatto{
+    color: gray;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.data_messaggio{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    color: gray;
+}
+
+.contatti:hover{
+    background-color: rgb(229,229,229);
+}
+
+/* Chat */
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.chat_toolbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    background-color: rgb(229,229,229);
+}
+
+.chat_ricerca{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    color: grey;
+    background-color: rgb(240,234,230);
+}
+
+.chat_finestra{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: rgb(222,213,204);
+    row-gap: 10px;
+    padding: 30px;
+}
+
+.inviato, .ricevuto{
+    height: 60px;
+    width: 350px;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+}
+
+.inviato{
+    background-color: rgb(205,250,172);
+    align-self: flex-end;
+}
+
+.ricevuto{
+    background-color: white;
+}
+
+.messaggio_input{
+    height: 35px;
+    padding: 0 20px;
+    margin: 0 30px;
+    border: none;
+    flex-grow: 1;
+}
+
