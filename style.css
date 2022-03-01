@@ -154,6 +154,7 @@ img{
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    display: none;
 }
 
 .chat_toolbar{
@@ -184,7 +185,7 @@ img{
     padding: 30px;
 }
 
-.inviato, .ricevuto{
+.sent, .received{
     min-height: 60px;
     min-width: 200px;
     max-width: 70%;
@@ -193,20 +194,20 @@ img{
     padding: 10px;
 }
 
-.inviato + .ricevuto{
+.sent + .received{
     margin-top: 10px;
 }
 
-.ricevuto + .inviato{
+.received + .sent{
     margin-top: 10px;
 }
 
-.inviato{
+.sent{
     background-color: rgb(205,250,172);
     align-self: flex-end;
 }
 
-.ricevuto{
+.received{
     background-color: white;
     align-self: flex-start;
 }
@@ -223,3 +224,6 @@ img{
     background-color: rgb(229,229,229);
 }
 
+.chat.active{
+    display: inherit;
+}

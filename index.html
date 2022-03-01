@@ -60,13 +60,13 @@
             </div>
         </div>
 
-        <div class="chat">
+        <div class="chat" v-for="(chat,i) in contacts" :class="attivo == i ? 'active' : ''">
             <div class="chat_toolbar">
                 <div class="profilo_utente">
                     <div class="immagine_utente">
-                        <img src="img/generic-avatar.jpg" alt="">
+                        <img :src="chat.avatar" alt="">
                     </div>
-                    <p>Michele</p>
+                    <p>{{chat.name}}</p>
                 </div>
                 <div class="icone">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -75,9 +75,7 @@
                 </div>
             </div>
             <div class="chat_finestra">
-                <div class="inviato">Hai portato a spasso il cane?</div>
-                <div class="inviato">Ricordati di dargli da mangiare</div>
-                <div class="ricevuto">Tutto fatto!</div>
+                <div :class="(chat.messages)[i].status" v-for="(messaggi,i) in (chat.messages)">{{(chat.messages[i]).text}}</div>
             </div>
             <div class="chat_ricerca">
                 <div>
