@@ -101,19 +101,24 @@ const app = new Vue(
 
             inviaMessaggio : function(j){
                 (j.messages).push({
-                    date: '',
+                    date: dayjs(),
                     text: this.nuovoMessaggio,
                     status: 'sent',
                 });
                 this.nuovoMessaggio = '';
                 setTimeout( () => {
                     (j.messages).push({
-                        date: '',
+                        
+                        date: dayjs(),
                         text: this.rispostaDefault,
                         status: 'received',
                     });
                 },1000);
             },
+
+            formattaData : function(data) {
+               return dayjs(data).format('HH:mm');
+            }
         }
     }
 );

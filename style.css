@@ -192,6 +192,7 @@ img{
     border-radius: 5px;
     display: flex;
     padding: 10px;
+    justify-content: space-between;
 }
 
 .sent + .received{
@@ -226,4 +227,9 @@ img{
 
 .chat.active{
     display: inherit;
+}
+
+.data_messaggio_finestra{
+    font-size: 10px;
+    align-self: flex-end;
 }
