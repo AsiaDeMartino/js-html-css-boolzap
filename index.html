@@ -75,13 +75,13 @@
                 </div>
             </div>
             <div class="chat_finestra">
-                <div :class="(chat.messages)[i].status" v-for="(messaggi,i) in (chat.messages)">{{(chat.messages[i]).text}}</div>
+                <div :class="(chat.messages)[j].status" v-for="(messaggi,j) in (chat.messages)">{{(chat.messages[j]).text}}</div>
             </div>
             <div class="chat_ricerca">
                 <div>
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
-                <input type="text" class="messaggio_input" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="inviaMessaggio(chat)" v-model="nuovoMessaggio" type="text" class="messaggio_input" placeholder="Scrivi un messaggio">
                 <div>
                     <i class="fa-solid fa-microphone"></i>
                 </div>

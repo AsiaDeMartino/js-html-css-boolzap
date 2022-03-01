@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#container',
         data : {
+            nuovoMessaggio: '',
             attivo : 0,
             immagineUtente : 'img/avatar-3.png',
             nomeUtente : 'Asia',
@@ -96,6 +97,14 @@ const app = new Vue(
             contattoAttivo : function(j){
                 this.attivo = j;
             },
+            inviaMessaggio : function(j){
+                (j.messages).push({
+                    date: '',
+                    text: this.nuovoMessaggio,
+                    status: 'sent',
+                });
+                this.nuovoMessaggio = ''
+            }
         }
     }
 );
