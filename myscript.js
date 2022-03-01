@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#container',
         data : {
+            rispostaDefault: 'Ok!',
             nuovoMessaggio: '',
             attivo : 0,
             immagineUtente : 'img/avatar-3.png',
@@ -97,14 +98,22 @@ const app = new Vue(
             contattoAttivo : function(j){
                 this.attivo = j;
             },
+
             inviaMessaggio : function(j){
                 (j.messages).push({
                     date: '',
                     text: this.nuovoMessaggio,
                     status: 'sent',
                 });
-                this.nuovoMessaggio = ''
-            }
+                this.nuovoMessaggio = '';
+                setTimeout( () => {
+                    (j.messages).push({
+                        date: '',
+                        text: this.rispostaDefault,
+                        status: 'received',
+                    });
+                },1000);
+            },
         }
     }
 );
