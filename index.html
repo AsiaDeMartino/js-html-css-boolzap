@@ -17,9 +17,9 @@
             <div class="sidebar_toolbar">
                 <div class="profilo_utente">
                     <div class="immagine_utente">
-                        <img src="img/generic-avatar.jpg" alt="">
+                        <img :src="immagineUtente" alt="">
                     </div>
-                    <p>Asia</p>
+                    <p>{{nomeUtente}}</p>
                 </div>
                 <div class="icone">
                     <i class="fa-solid fa-circle-notch"></i>
@@ -42,16 +42,16 @@
             </div>
             <div>
                 <ul class="lista_contatti">
-                    <li  class="contatti">
+                    <li v-for="item in contacts" class="contatti">
                         <div class="immagine_utente">
-                            <img src="img/generic-avatar.jpg">
+                            <img :src="item.avatar">
                         </div>
                         <div>
-                            <span class="nome_contatto">Michele</span>
-                            <span class="messaggio_contatto">Tutto fatto!</span>
+                            <span class="nome_contatto">{{item.name}}</span>
+                            <span class="messaggio_contatto">{{item.messages[item.messages.length - 1].text}}</span>
                         </div>
                         <div class="data_messaggio">
-                            <span>10/01/2020 15:30</span>
+                            <span>{{item.messages[item.messages.length - 1].date}}</span>
                         </div>
                     </li>
                 </ul>
