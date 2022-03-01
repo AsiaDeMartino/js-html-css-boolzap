@@ -42,7 +42,7 @@
             </div>
             <div>
                 <ul class="lista_contatti">
-                    <li v-for="item in contacts" class="contatti">
+                    <li v-for="(item,i) in contacts" :class="attivo == i ? 'active' : ''" @click="contattoAttivo(i)" class="contatti">
                         <div class="immagine_utente">
                             <img :src="item.avatar">
                         </div>

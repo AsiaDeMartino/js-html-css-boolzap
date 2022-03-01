@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#container',
         data : {
+            attivo : 0,
             immagineUtente : 'img/avatar-3.png',
             nomeUtente : 'Asia',
             contacts: [
@@ -90,6 +91,12 @@ const app = new Vue(
                 }
             ],  
         },
+
+        methods: {
+            contattoAttivo : function(j){
+                this.attivo = j;
+            },
+        }
     }
 );
 

@@ -219,5 +219,7 @@ img{
     flex-grow: 1;
 }
 
-
+.sidebar .active{
+    background-color: rgb(229,229,229);
+}
 
