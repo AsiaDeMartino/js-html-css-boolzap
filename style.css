@@ -19,6 +19,7 @@ img{
 
 .sidebar{
     width: calc(100% / 3);
+    min-width: 350px ;
     border-right: 2px solid rgb(201,201,201);
 }
 
@@ -47,8 +48,8 @@ img{
 }
 
 .immagine_utente{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     overflow: hidden;
     flex-shrink: 0;
@@ -110,7 +111,7 @@ img{
     align-items: center;
     gap: 15px;
     position: relative;
-    margin-left: 15px;
+    padding-left: 15px;
 }
 
 .nome_contatto, .messaggio_contatto{
@@ -136,6 +137,14 @@ img{
 
 .contatti:hover{
     background-color: rgb(229,229,229);
+}
+
+.bordo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid rgb(229,229,229);
 }
 
 /* Chat */
@@ -167,20 +176,29 @@ img{
 }
 
 .chat_finestra{
+    background-image: url(img/background.png);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: rgb(222,213,204);
     row-gap: 10px;
     padding: 30px;
 }
 
 .inviato, .ricevuto{
-    height: 60px;
-    width: 350px;
+    min-height: 60px;
+    min-width: 200px;
+    max-width: 70%;
     border-radius: 5px;
     display: flex;
     padding: 10px;
+}
+
+.inviato + .ricevuto{
+    margin-top: 10px;
+}
+
+.ricevuto + .inviato{
+    margin-top: 10px;
 }
 
 .inviato{
@@ -190,6 +208,7 @@ img{
 
 .ricevuto{
     background-color: white;
+    align-self: flex-start;
 }
 
 .messaggio_input{
@@ -199,4 +218,6 @@ img{
     border: none;
     flex-grow: 1;
 }
+
+
 

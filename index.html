@@ -46,13 +46,15 @@
                         <div class="immagine_utente">
                             <img :src="item.avatar">
                         </div>
-                        <div>
-                            <span class="nome_contatto">{{item.name}}</span>
-                            <span class="messaggio_contatto">{{item.messages[item.messages.length - 1].text}}</span>
-                        </div>
-                        <div class="data_messaggio">
-                            <span>{{item.messages[item.messages.length - 1].date}}</span>
-                        </div>
+                       <div class="bordo">
+                            <div>
+                                <span class="nome_contatto">{{item.name}}</span>
+                                <span class="messaggio_contatto">{{item.messages[item.messages.length - 1].text}}</span>
+                            </div>
+                            <div class="data_messaggio">
+                                <span>{{item.messages[item.messages.length - 1].date}}</span>
+                            </div>
+                       </div>
                     </li>
                 </ul>
             </div>
