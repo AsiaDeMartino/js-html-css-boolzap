@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#container',
         data : {
+            ricercaUtente: '',
             rispostaDefault: 'Ok!',
             nuovoMessaggio: '',
             attivo : 0,
@@ -118,7 +119,15 @@ const app = new Vue(
 
             formattaData : function(data) {
                return dayjs(data).format('HH:mm');
-            }
+            },
+
+            ricercaContatto : function(j) {
+                if (((j.name).toLowerCase()).startsWith((this.ricercaUtente).toLowerCase())) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
         }
     }
 );

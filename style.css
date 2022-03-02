@@ -233,3 +233,7 @@ img{
     font-size: 10px;
     align-self: flex-end;
 }
+
+.nascondi {
+    display: none;
+}
