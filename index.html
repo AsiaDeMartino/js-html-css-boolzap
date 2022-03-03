@@ -76,9 +76,17 @@
                 </div>
             </div>
             <div class="chat_finestra">
-                <div :class="(chat.messages)[j].status" v-for="(messaggi,j) in (chat.messages)">{{(chat.messages[j]).text}}
-                    <div class="data_messaggio_finestra">
-                        <span>{{formattaData((chat.messages)[j].date)}}</span>
+                <div :class="(chat.messages)[j].status" v-for="(messaggi,j) in (chat.messages)">
+                    <div class="messaggi">
+                        {{(chat.messages[j]).text}}
+                        <div class="data_messaggio_finestra">
+                            <i @click="dropdown(j)" class="fa-solid fa-chevron-down"></i>
+                            <span>{{formattaData((chat.messages)[j].date)}}</span>
+                        </div>
+                    </div>
+                    <div :class="mostra == j ? '' : 'nascondi'" class="elimina_messaggio" >
+                        <i @click="chiudi" class="fa-solid fa-xmark"></i>
+                        <span @click="eliminaMessaggio(chat,j)">Elimina messaggio</span>
                     </div>
                 </div>
             </div>

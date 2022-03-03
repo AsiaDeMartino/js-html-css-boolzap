@@ -2,6 +2,7 @@ const app = new Vue(
     {
         el : '#container',
         data : {
+            mostra: -1,
             ricercaUtente: '',
             rispostaDefault: 'Ok!',
             nuovoMessaggio: '',
@@ -128,6 +129,20 @@ const app = new Vue(
                     return false;
                 }
             },
+
+            dropdown : function(j) {
+                this.mostra = j;
+            },
+
+            chiudi : function() {
+                this.mostra = -1;
+            },
+
+            eliminaMessaggio : function(indice1, indice2){
+                (indice1.messages).splice(indice2,1);
+                this.mostra = -1;
+            }
+
         }
     }
 );

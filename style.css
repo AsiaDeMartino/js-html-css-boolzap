@@ -185,14 +185,19 @@ img{
     padding: 30px;
 }
 
+.messaggi{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .sent, .received{
     min-height: 60px;
     min-width: 200px;
     max-width: 70%;
     border-radius: 5px;
-    display: flex;
     padding: 10px;
-    justify-content: space-between;
+    position: relative;
 }
 
 .sent + .received{
@@ -231,8 +236,55 @@ img{
 
 .data_messaggio_finestra{
     font-size: 10px;
-    align-self: flex-end;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.fa-chevron-down{
+    font-size: 15px;
+}
+
+.elimina_messaggio{
+    height: 50px;
+    width: 120px;
+    padding: 5px;
+    position: absolute;
+    top : 50%;
+    left: 60%;
+    z-index: 100;
+    border-radius: 10px;
+    background-color: rgb(240, 240, 240);
+    font-size: 12px;
+    box-shadow: 4px 4px 4px rgb(135, 135, 135);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.elimina_messaggio i{
+    align-self: flex-end;
+    font-size: 10px;
+    padding: 1px;
+    border-radius: 50%;
+    background-color: transparent;
+    aspect-ratio: 1;
+    text-align: center;
+}
+
+.elimina_messaggio i:hover{
+    background-color: rgb(187, 15, 15);
+    color: white;
+    
+}
+
+.elimina_messaggio span:hover{
+    color: grey;
+    user-select: none;
+}
+
 
 .nascondi {
     display: none;
